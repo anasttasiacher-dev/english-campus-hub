@@ -13,6 +13,7 @@ import ProgramPage from "./pages/student/ProgramPage";
 import LessonPage from "./pages/student/LessonPage";
 import TrainerPage from "./pages/student/TrainerPage";
 import LibraryPage from "./pages/student/LibraryPage";
+import ProfilePage from "./pages/student/ProfilePage";
 import AdminLayout from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
@@ -43,6 +44,7 @@ const App = () => (
               <Route path="lesson/:lessonId" element={<LessonPage />} />
               <Route path="trainer" element={<TrainerPage />} />
               <Route path="library" element={<LibraryPage />} />
+              <Route path="profile" element={<ProfilePage />} />
             </Route>
 
             <Route path="/admin" element={<AdminLayout />}>

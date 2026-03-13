@@ -124,8 +124,8 @@ export interface TrainerStats {
 export const DEMO_PRODUCT: Product = {
   id: 'prod_tenselab',
   title: 'Tense Lab',
-  description: 'Полный практикум по временам английского языка. 12 уроков с видео, конспектами, упражнениями, тренажёром и библиотекой материалов.',
-  price: 3900,
+  description: 'Полный практикум по временам английского языка. 13 уроков с видео, конспектами, упражнениями, тренажёром и библиотекой материалов.',
+  price: 5490,
   slug: 'tense-lab',
   cover_image: '',
   status: 'active',
@@ -139,8 +139,8 @@ export const DEMO_USERS: User[] = [
 ];
 
 export const DEMO_ORDERS: Order[] = [
-  { id: 'ord_1', user_id: 'user_student', product_id: 'prod_tenselab', amount: 3900, payment_status: 'paid', payment_provider: 'demo', created_at: '2025-02-10' },
-  { id: 'ord_2', user_id: 'user_student2', product_id: 'prod_tenselab', amount: 3900, payment_status: 'paid', payment_provider: 'demo', created_at: '2025-03-01' },
+  { id: 'ord_1', user_id: 'user_student', product_id: 'prod_tenselab', amount: 5490, payment_status: 'paid', payment_provider: 'demo', created_at: '2025-02-10' },
+  { id: 'ord_2', user_id: 'user_student2', product_id: 'prod_tenselab', amount: 5490, payment_status: 'paid', payment_provider: 'demo', created_at: '2025-03-01' },
 ];
 
 export const DEMO_ENROLLMENTS: Enrollment[] = [
@@ -149,7 +149,7 @@ export const DEMO_ENROLLMENTS: Enrollment[] = [
 ];
 
 export const DEMO_SECTIONS: Section[] = [
-  { id: 'sec_1', product_id: 'prod_tenselab', title: 'Present Foundations', description: 'Основы настоящего времени: Simple, Continuous и их сравнение', sort_order: 1, is_published: true },
+  { id: 'sec_1', product_id: 'prod_tenselab', title: 'Present Foundations', description: 'Основы настоящего времени: to be, Simple, Continuous и их сравнение', sort_order: 1, is_published: true },
   { id: 'sec_2', product_id: 'prod_tenselab', title: 'Past System', description: 'Система прошедшего времени: Simple, Continuous и различия', sort_order: 2, is_published: true },
   { id: 'sec_3', product_id: 'prod_tenselab', title: 'Perfect System', description: 'Перфектные времена: Present Perfect, Past Perfect и Continuous формы', sort_order: 3, is_published: true },
   { id: 'sec_4', product_id: 'prod_tenselab', title: 'Future System', description: 'Будущее время: основные и продвинутые формы', sort_order: 4, is_published: true },
@@ -157,14 +157,41 @@ export const DEMO_SECTIONS: Section[] = [
 
 export const DEMO_LESSONS: Lesson[] = [
   {
-    id: 'les_1', section_id: 'sec_1', title: 'Present Simple + to be', short_description: 'Рутина, факты, состояния, базовые конструкции',
+    id: 'les_1', section_id: 'sec_1', title: 'To be (am / is / are)', short_description: 'Глагол to be: состояния, характеристики, базовые конструкции',
     lesson_number: 1, status: 'published', video_url: '', sort_order: 1, is_published: true,
-    note_content: `## Present Simple + to be
+    note_content: `## To be (am / is / are)
+
+### Когда используется
+- **Характеристики и состояния:** She is tall. He is happy.
+- **Профессия, возраст, национальность:** I am a student. They are from Germany.
+- **Местоположение:** We are at home.
+
+### Структура
+| Subject | To be | Example |
+|---------|-------|---------|
+| I | am | I **am** a student. |
+| He/She/It | is | She **is** happy. |
+| You/We/They | are | They **are** here. |
+
+### Отрицание и вопросы
+| Форма | Пример |
+|-------|--------|
+| **−** | I **am not** / He **isn't** / They **aren't** |
+| **?** | **Am** I? / **Is** she? / **Are** they? |
+
+### Типичные ошибки
+- ❌ I is a student → ✅ I **am** a student
+- ❌ He are happy → ✅ He **is** happy
+- ❌ I am work → ✅ I **work** (не смешивай to be и основной глагол)`
+  },
+  {
+    id: 'les_2', section_id: 'sec_1', title: 'Present Simple', short_description: 'Рутина, факты, регулярные действия',
+    lesson_number: 2, status: 'published', video_url: '', sort_order: 2, is_published: true,
+    note_content: `## Present Simple
 
 ### Когда используется
 - **Регулярные действия и рутина:** I work every day.
 - **Общие факты и истины:** The sun rises in the east.
-- **Состояния и характеристики:** She is tall. He likes coffee.
 - **Расписания:** The train leaves at 9 AM.
 
 ### Структура
@@ -174,30 +201,21 @@ export const DEMO_LESSONS: Lesson[] = [
 | **−** | I **don't work**. He **doesn't work**. |
 | **?** | **Do** you work? **Does** he work? |
 
-### To be: am / is / are
-| Subject | To be | Example |
-|---------|-------|---------|
-| I | am | I **am** a student. |
-| He/She/It | is | She **is** happy. |
-| You/We/They | are | They **are** here. |
-
 ### Маркеры времени
 always, usually, often, sometimes, rarely, never, every day/week/year
 
 ### Типичные ошибки
 - ❌ He work → ✅ He **works** (не забывай -s/-es в 3 лице)
-- ❌ I am work → ✅ I **work** (не смешивай to be и основной глагол)
 - ❌ Does he works? → ✅ Does he **work**? (после does глагол без -s)
 
 ### Примеры
 1. I **drink** coffee every morning.
 2. She **doesn't** like spicy food.
-3. **Do** they **live** in London?
-4. He **is** an engineer.`
+3. **Do** they **live** in London?`
   },
   {
-    id: 'les_2', section_id: 'sec_1', title: 'Present Continuous', short_description: 'Действие сейчас, временные процессы',
-    lesson_number: 2, status: 'published', video_url: '', sort_order: 2, is_published: true,
+    id: 'les_3', section_id: 'sec_1', title: 'Present Continuous', short_description: 'Действие сейчас, временные процессы',
+    lesson_number: 3, status: 'published', video_url: '', sort_order: 3, is_published: true,
     note_content: `## Present Continuous
 
 ### Когда используется
@@ -222,8 +240,8 @@ now, right now, at the moment, currently, today, this week
 - ❌ I am knowing → ✅ I **know** (stative verbs не используются в Continuous)`
   },
   {
-    id: 'les_3', section_id: 'sec_1', title: 'Present Simple vs Present Continuous', short_description: 'Постоянное vs происходящее сейчас',
-    lesson_number: 3, status: 'published', video_url: '', sort_order: 3, is_published: true,
+    id: 'les_4', section_id: 'sec_1', title: 'Present Simple vs Present Continuous', short_description: 'Постоянное vs происходящее сейчас',
+    lesson_number: 4, status: 'published', video_url: '', sort_order: 4, is_published: true,
     note_content: `## Present Simple vs Present Continuous
 
 ### Ключевое различие
@@ -241,8 +259,8 @@ now, right now, at the moment, currently, today, this week
 2. I **live** in Moscow. (постоянно) → I **am living** in a hotel this month. (временно)`
   },
   {
-    id: 'les_4', section_id: 'sec_2', title: 'Past Simple', short_description: 'Завершённые действия в прошлом',
-    lesson_number: 4, status: 'published', video_url: '', sort_order: 1, is_published: true,
+    id: 'les_5', section_id: 'sec_2', title: 'Past Simple', short_description: 'Завершённые действия в прошлом',
+    lesson_number: 5, status: 'published', video_url: '', sort_order: 1, is_published: true,
     note_content: `## Past Simple
 
 ### Когда используется
@@ -265,8 +283,8 @@ yesterday, last week/month/year, ago, in 2020, when I was young
 - ❌ I didn't went → ✅ I didn't **go**`
   },
   {
-    id: 'les_5', section_id: 'sec_2', title: 'Past Continuous', short_description: 'Процесс в прошлом, фон действия',
-    lesson_number: 5, status: 'published', video_url: '', sort_order: 2, is_published: true,
+    id: 'les_6', section_id: 'sec_2', title: 'Past Continuous', short_description: 'Процесс в прошлом, фон действия',
+    lesson_number: 6, status: 'published', video_url: '', sort_order: 2, is_published: true,
     note_content: `## Past Continuous
 
 ### Когда используется
@@ -285,8 +303,8 @@ yesterday, last week/month/year, ago, in 2020, when I was young
 at that moment, while, when, all day yesterday, from 5 to 7`
   },
   {
-    id: 'les_6', section_id: 'sec_2', title: 'Past Simple vs Past Continuous', short_description: 'Событие vs процесс в прошлом',
-    lesson_number: 6, status: 'published', video_url: '', sort_order: 3, is_published: true,
+    id: 'les_7', section_id: 'sec_2', title: 'Past Simple vs Past Continuous', short_description: 'Событие vs процесс в прошлом',
+    lesson_number: 7, status: 'published', video_url: '', sort_order: 3, is_published: true,
     note_content: `## Past Simple vs Past Continuous
 
 ### Ключевое различие
@@ -301,8 +319,8 @@ at that moment, while, when, all day yesterday, from 5 to 7`
 - I **was reading** when the lights **went** out.`
   },
   {
-    id: 'les_7', section_id: 'sec_3', title: 'Present Perfect', short_description: 'Опыт, результат, связь с настоящим',
-    lesson_number: 7, status: 'published', video_url: '', sort_order: 1, is_published: true,
+    id: 'les_8', section_id: 'sec_3', title: 'Present Perfect', short_description: 'Опыт, результат, связь с настоящим',
+    lesson_number: 8, status: 'published', video_url: '', sort_order: 1, is_published: true,
     note_content: `## Present Perfect
 
 ### Когда используется
@@ -321,8 +339,8 @@ ever, never, already, yet, just, recently, so far, this week/month/year
 - ❌ I have seen him yesterday → ✅ I **saw** him yesterday (с конкретным прошлым → Past Simple)`
   },
   {
-    id: 'les_8', section_id: 'sec_3', title: 'Present Perfect vs Past Simple', short_description: 'Результат сейчас vs конкретное прошлое',
-    lesson_number: 8, status: 'published', video_url: '', sort_order: 2, is_published: true,
+    id: 'les_9', section_id: 'sec_3', title: 'Present Perfect vs Past Simple', short_description: 'Результат сейчас vs конкретное прошлое',
+    lesson_number: 9, status: 'published', video_url: '', sort_order: 2, is_published: true,
     note_content: `## Present Perfect vs Past Simple
 
 ### Ключевое различие
@@ -333,8 +351,8 @@ ever, never, already, yet, just, recently, so far, this week/month/year
 | She **has just arrived**. | She **arrived** 10 minutes ago. |`
   },
   {
-    id: 'les_9', section_id: 'sec_3', title: 'Present Perfect Continuous', short_description: 'Длительность до настоящего',
-    lesson_number: 9, status: 'published', video_url: '', sort_order: 3, is_published: true,
+    id: 'les_10', section_id: 'sec_3', title: 'Present Perfect Continuous', short_description: 'Длительность до настоящего',
+    lesson_number: 10, status: 'published', video_url: '', sort_order: 3, is_published: true,
     note_content: `## Present Perfect Continuous
 
 ### Когда используется
@@ -348,8 +366,8 @@ ever, never, already, yet, just, recently, so far, this week/month/year
 for, since, all day, how long, lately, recently`
   },
   {
-    id: 'les_10', section_id: 'sec_3', title: 'Past Perfect + Past Perfect Continuous', short_description: 'Что было раньше и как долго',
-    lesson_number: 10, status: 'published', video_url: '', sort_order: 4, is_published: true,
+    id: 'les_11', section_id: 'sec_3', title: 'Past Perfect + Past Perfect Continuous', short_description: 'Что было раньше и как долго',
+    lesson_number: 11, status: 'published', video_url: '', sort_order: 4, is_published: true,
     note_content: `## Past Perfect + Past Perfect Continuous
 
 ### Past Perfect: had + V3
@@ -361,8 +379,8 @@ for, since, all day, how long, lately, recently`
 - She **had been waiting** for 2 hours when the bus finally came.`
   },
   {
-    id: 'les_11', section_id: 'sec_4', title: 'Future Forms', short_description: 'will, be going to, Present Simple/Continuous for Future',
-    lesson_number: 11, status: 'published', video_url: '', sort_order: 1, is_published: true,
+    id: 'les_12', section_id: 'sec_4', title: 'Future Forms', short_description: 'will, be going to, Present Simple/Continuous for Future',
+    lesson_number: 12, status: 'published', video_url: '', sort_order: 1, is_published: true,
     note_content: `## Future Forms
 
 ### will
@@ -381,8 +399,8 @@ for, since, all day, how long, lately, recently`
 - Договорённости: We are meeting them at 5.`
   },
   {
-    id: 'les_12', section_id: 'sec_4', title: 'Advanced Future Forms', short_description: 'Future Continuous, Future Perfect, Future Perfect Continuous',
-    lesson_number: 12, status: 'published', video_url: '', sort_order: 2, is_published: true,
+    id: 'les_13', section_id: 'sec_4', title: 'Advanced Future Forms', short_description: 'Future Continuous, Future Perfect, Future Perfect Continuous',
+    lesson_number: 13, status: 'published', video_url: '', sort_order: 2, is_published: true,
     note_content: `## Advanced Future Forms
 
 ### Future Continuous: will be + V-ing
@@ -399,10 +417,39 @@ for, since, all day, how long, lately, recently`
   },
 ];
 
+// All available tense tags for trainer checkboxes
+export const ALL_TENSE_TAGS = [
+  { key: 'to_be', label: 'To be' },
+  { key: 'present_simple', label: 'Present Simple' },
+  { key: 'present_continuous', label: 'Present Continuous' },
+  { key: 'past_simple', label: 'Past Simple' },
+  { key: 'past_continuous', label: 'Past Continuous' },
+  { key: 'present_perfect', label: 'Present Perfect' },
+  { key: 'present_perfect_continuous', label: 'Present Perfect Continuous' },
+  { key: 'past_perfect', label: 'Past Perfect' },
+  { key: 'future_will', label: 'Future (will)' },
+  { key: 'future_going_to', label: 'Future (going to)' },
+];
+
 export const DEMO_EXERCISES: Exercise[] = [
-  // Lesson 1 exercises
+  // Lesson 1 (to be)
   {
-    id: 'ex_1', lesson_id: 'les_1', prompt: 'She ___ to work every day.',
+    id: 'ex_1b', lesson_id: 'les_1', prompt: 'They ___ from Germany.',
+    exercise_type: 'multiple_choice', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['is', 'am', 'are', 'be'],
+    correct_answer: 'are', explanation: 'С they используем are.',
+    hint: 'They — множественное число.', confusion_note: 'Не путай am/is/are.', is_active: true
+  },
+  {
+    id: 'ex_1c', lesson_id: 'les_1', prompt: 'She ___ a doctor.',
+    exercise_type: 'fill_gap', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['am', 'is', 'are', 'be'],
+    correct_answer: 'is', explanation: 'С she/he/it используем is.',
+    hint: 'She — 3-е лицо единственного числа.', confusion_note: 'am → только для I.', is_active: true
+  },
+  // Lesson 2 (Present Simple)
+  {
+    id: 'ex_2a', lesson_id: 'les_2', prompt: 'She ___ to work every day.',
     exercise_type: 'fill_gap', tense_tags: ['present_simple'], difficulty: 'easy',
     options_json: ['go', 'goes', 'going', 'is going'],
     correct_answer: 'goes', explanation: 'В Present Simple с he/she/it добавляем -s/-es к глаголу.',
@@ -411,38 +458,31 @@ export const DEMO_EXERCISES: Exercise[] = [
     is_active: true
   },
   {
-    id: 'ex_2', lesson_id: 'les_1', prompt: 'They ___ from Germany.',
-    exercise_type: 'multiple_choice', tense_tags: ['present_simple', 'to_be'], difficulty: 'easy',
-    options_json: ['is', 'am', 'are', 'be'],
-    correct_answer: 'are', explanation: 'С they используем are.',
-    hint: 'They — множественное число.', confusion_note: 'Не путай am/is/are.', is_active: true
-  },
-  {
-    id: 'ex_3', lesson_id: 'les_1', prompt: 'Найди ошибку: "He don\'t like pizza."',
+    id: 'ex_2b', lesson_id: 'les_2', prompt: 'Найди ошибку: "He don\'t like pizza."',
     exercise_type: 'error_correction', tense_tags: ['present_simple'], difficulty: 'easy',
     options_json: ["He doesn't like pizza.", "He don't likes pizza.", "He not like pizza.", "He isn't like pizza."],
     correct_answer: "He doesn't like pizza.",
     explanation: 'С he/she/it используем doesn\'t, а не don\'t.',
     hint: '3-е лицо единственного числа.', confusion_note: 'don\'t → для I/you/we/they, doesn\'t → для he/she/it.', is_active: true
   },
-  // Lesson 2 exercises
+  // Lesson 3 (Present Continuous)
   {
-    id: 'ex_4', lesson_id: 'les_2', prompt: 'Look! The children ___ in the park.',
+    id: 'ex_3a', lesson_id: 'les_3', prompt: 'Look! The children ___ in the park.',
     exercise_type: 'fill_gap', tense_tags: ['present_continuous'], difficulty: 'easy',
     options_json: ['play', 'plays', 'are playing', 'is playing'],
     correct_answer: 'are playing', explanation: 'Look! — маркер Present Continuous. Children — мн.ч., поэтому are playing.',
     hint: 'Действие происходит прямо сейчас.', confusion_note: 'Не путай с Present Simple (привычки).', is_active: true
   },
   {
-    id: 'ex_5', lesson_id: 'les_2', prompt: 'I ___ a new language this semester.',
+    id: 'ex_3b', lesson_id: 'les_3', prompt: 'I ___ a new language this semester.',
     exercise_type: 'multiple_choice', tense_tags: ['present_continuous'], difficulty: 'medium',
     options_json: ['learn', 'am learning', 'learns', 'learning'],
     correct_answer: 'am learning', explanation: 'This semester — временная ситуация, используем Present Continuous.',
     hint: 'Это временная ситуация, а не постоянная привычка.', confusion_note: 'This semester = ограниченный период → Continuous.', is_active: true
   },
-  // Lesson 3 exercises
+  // Lesson 4 (Present Simple vs Continuous)
   {
-    id: 'ex_6', lesson_id: 'les_3', prompt: 'He usually ___ coffee, but today he ___ tea.',
+    id: 'ex_4a', lesson_id: 'les_4', prompt: 'He usually ___ coffee, but today he ___ tea.',
     exercise_type: 'fill_gap', tense_tags: ['present_simple', 'present_continuous'], difficulty: 'medium',
     options_json: ['drinks / is drinking', 'is drinking / drinks', 'drink / drinking', 'drinks / drinks'],
     correct_answer: 'drinks / is drinking',
@@ -450,79 +490,81 @@ export const DEMO_EXERCISES: Exercise[] = [
     hint: 'Первая часть — про привычку, вторая — про сегодняшнее исключение.',
     confusion_note: 'Маркеры: usually = Simple, today = может быть Continuous.', is_active: true
   },
-  // Lesson 4 exercises
+  // Lesson 5 (Past Simple)
   {
-    id: 'ex_7', lesson_id: 'les_4', prompt: 'She ___ to Paris last summer.',
+    id: 'ex_5a', lesson_id: 'les_5', prompt: 'She ___ to Paris last summer.',
     exercise_type: 'fill_gap', tense_tags: ['past_simple'], difficulty: 'easy',
     options_json: ['travel', 'travels', 'travelled', 'was travelling'],
     correct_answer: 'travelled', explanation: 'Last summer — конкретное прошлое → Past Simple.',
     hint: 'Last summer — маркер прошлого.', confusion_note: 'Не путай с Past Continuous.', is_active: true
   },
-  // Lesson 7 exercises
+  // Lesson 6 (Past Continuous)
   {
-    id: 'ex_8', lesson_id: 'les_7', prompt: 'I ___ never ___ sushi.',
-    exercise_type: 'fill_gap', tense_tags: ['present_perfect'], difficulty: 'easy',
-    options_json: ['have / tried', 'has / tried', 'had / tried', 'did / try'],
-    correct_answer: 'have / tried', explanation: 'Опыт в жизни без привязки ко времени → Present Perfect: have + V3.',
-    hint: 'Never — маркер Present Perfect.', confusion_note: 'Не путай с Past Simple — тут нет конкретного времени.', is_active: true
-  },
-  // Lesson 8 exercises
-  {
-    id: 'ex_9', lesson_id: 'les_8', prompt: 'Выбери правильный вариант: I ___ this movie. (опыт, без указания времени)',
-    exercise_type: 'choose_context', tense_tags: ['present_perfect', 'past_simple'], difficulty: 'medium',
-    options_json: ['have seen', 'saw', 'had seen', 'was seeing'],
-    correct_answer: 'have seen', explanation: 'Опыт без указания когда → Present Perfect.',
-    hint: 'Нет конкретного времени в прошлом.', confusion_note: 'Если бы было "yesterday" → Past Simple.', is_active: true
-  },
-  // Lesson 11 exercises
-  {
-    id: 'ex_10', lesson_id: 'les_11', prompt: '"I think I ___ have the salad." (решение в момент речи)',
-    exercise_type: 'multiple_choice', tense_tags: ['future_will'], difficulty: 'easy',
-    options_json: ["will", "am going to", "am having", "have"],
-    correct_answer: "will", explanation: 'Спонтанное решение прямо сейчас → will.',
-    hint: 'Решение принято в момент речи.', confusion_note: 'Going to — для заранее обдуманных планов.', is_active: true
-  },
-  // Extra trainer exercises
-  {
-    id: 'ex_11', lesson_id: 'les_5', prompt: 'At 7 PM yesterday, we ___ dinner.',
+    id: 'ex_6a', lesson_id: 'les_6', prompt: 'At 7 PM yesterday, we ___ dinner.',
     exercise_type: 'fill_gap', tense_tags: ['past_continuous'], difficulty: 'easy',
     options_json: ['had', 'were having', 'have had', 'are having'],
     correct_answer: 'were having', explanation: 'В конкретный момент в прошлом шёл процесс → Past Continuous.',
     hint: 'At 7 PM yesterday = момент в прошлом.', confusion_note: 'Past Simple — завершённое. Continuous — процесс в моменте.', is_active: true
   },
+  // Lesson 8 (Present Perfect)
   {
-    id: 'ex_12', lesson_id: 'les_9', prompt: 'She ___ for this company for 10 years.',
+    id: 'ex_8a', lesson_id: 'les_8', prompt: 'I ___ never ___ sushi.',
+    exercise_type: 'fill_gap', tense_tags: ['present_perfect'], difficulty: 'easy',
+    options_json: ['have / tried', 'has / tried', 'had / tried', 'did / try'],
+    correct_answer: 'have / tried', explanation: 'Опыт в жизни без привязки ко времени → Present Perfect: have + V3.',
+    hint: 'Never — маркер Present Perfect.', confusion_note: 'Не путай с Past Simple — тут нет конкретного времени.', is_active: true
+  },
+  // Lesson 9 (Present Perfect vs Past Simple)
+  {
+    id: 'ex_9a', lesson_id: 'les_9', prompt: 'Выбери правильный вариант: I ___ this movie. (опыт, без указания времени)',
+    exercise_type: 'choose_context', tense_tags: ['present_perfect', 'past_simple'], difficulty: 'medium',
+    options_json: ['have seen', 'saw', 'had seen', 'was seeing'],
+    correct_answer: 'have seen', explanation: 'Опыт без указания когда → Present Perfect.',
+    hint: 'Нет конкретного времени в прошлом.', confusion_note: 'Если бы было "yesterday" → Past Simple.', is_active: true
+  },
+  // Lesson 10 (Present Perfect Continuous)
+  {
+    id: 'ex_10a', lesson_id: 'les_10', prompt: 'She ___ for this company for 10 years.',
     exercise_type: 'fill_gap', tense_tags: ['present_perfect_continuous'], difficulty: 'medium',
     options_json: ['works', 'has been working', 'is working', 'worked'],
     correct_answer: 'has been working', explanation: 'Действие началось в прошлом и продолжается → Present Perfect Continuous с for.',
     hint: 'for 10 years — длительность до сейчас.', confusion_note: 'Не путай с Present Perfect (результат) или Simple (привычка).', is_active: true
   },
+  // Lesson 12 (Future)
+  {
+    id: 'ex_12a', lesson_id: 'les_12', prompt: '"I think I ___ have the salad." (решение в момент речи)',
+    exercise_type: 'multiple_choice', tense_tags: ['future_will'], difficulty: 'easy',
+    options_json: ["will", "am going to", "am having", "have"],
+    correct_answer: "will", explanation: 'Спонтанное решение прямо сейчас → will.',
+    hint: 'Решение принято в момент речи.', confusion_note: 'Going to — для заранее обдуманных планов.', is_active: true
+  },
 ];
 
 export const DEMO_MATERIALS: Material[] = [
-  { id: 'mat_1', title: 'Irregular Verbs Table', short_description: 'Полная таблица неправильных глаголов с транскрипцией и переводом', category: 'Таблицы', material_type: 'table', file_url: '#', related_lesson_id: null, related_section_id: null, is_published: true, is_featured: true },
-  { id: 'mat_2', title: 'Tense Comparison Chart', short_description: 'Сравнительная таблица всех времён английского языка', category: 'Шпаргалки', material_type: 'cheatsheet', file_url: '#', related_lesson_id: null, related_section_id: null, is_published: true, is_featured: true },
+  { id: 'mat_1', title: 'Irregular Verbs Table', short_description: 'Полная таблица неправильных глаголов с транскрипцией и переводом', category: 'Таблицы', material_type: 'table', file_url: '#', related_lesson_id: null, related_section_id: null, is_published: true, is_featured: false },
+  { id: 'mat_2', title: 'Tense Comparison Chart', short_description: 'Сравнительная таблица всех времён английского языка', category: 'Шпаргалки', material_type: 'cheatsheet', file_url: '#', related_lesson_id: null, related_section_id: null, is_published: true, is_featured: false },
   { id: 'mat_3', title: 'Present Tenses Quick Reference', short_description: 'Быстрая справка по настоящим временам с примерами и маркерами', category: 'Шпаргалки', material_type: 'cheatsheet', file_url: '#', related_lesson_id: null, related_section_id: 'sec_1', is_published: true, is_featured: false },
-  { id: 'mat_4', title: 'Stative Verbs List', short_description: 'Список глаголов состояния, которые не используются в Continuous', category: 'Основы', material_type: 'reference', file_url: '#', related_lesson_id: 'les_2', related_section_id: 'sec_1', is_published: true, is_featured: false },
-  { id: 'mat_5', title: 'Time Markers Guide', short_description: 'Полный гид по маркерам времени для каждого тense', category: 'Методички', material_type: 'guide', file_url: '#', related_lesson_id: null, related_section_id: null, is_published: true, is_featured: true },
+  { id: 'mat_4', title: 'Stative Verbs List', short_description: 'Список глаголов состояния, которые не используются в Continuous', category: 'Основы', material_type: 'reference', file_url: '#', related_lesson_id: 'les_3', related_section_id: 'sec_1', is_published: true, is_featured: false },
+  { id: 'mat_5', title: 'Time Markers Guide', short_description: 'Полный гид по маркерам времени для каждого tense', category: 'Методички', material_type: 'guide', file_url: '#', related_lesson_id: null, related_section_id: null, is_published: true, is_featured: false },
   { id: 'mat_6', title: 'Perfect vs Simple Study Guide', short_description: 'Когда использовать Perfect, а когда Simple — подробный разбор', category: 'Методички', material_type: 'guide', file_url: '#', related_lesson_id: null, related_section_id: 'sec_3', is_published: true, is_featured: false },
-  { id: 'mat_7', title: 'Future Forms Decision Tree', short_description: 'Схема выбора правильной формы будущего времени', category: 'Шпаргалки', material_type: 'cheatsheet', file_url: '#', related_lesson_id: null, related_section_id: 'sec_4', is_published: true, is_featured: true },
+  { id: 'mat_7', title: 'Future Forms Decision Tree', short_description: 'Схема выбора правильной формы будущего времени', category: 'Шпаргалки', material_type: 'cheatsheet', file_url: '#', related_lesson_id: null, related_section_id: 'sec_4', is_published: true, is_featured: false },
   { id: 'mat_8', title: 'Common Mistakes Workbook', short_description: 'Рабочая тетрадь с типичными ошибками и упражнениями на их исправление', category: 'Методички', material_type: 'guide', file_url: '#', related_lesson_id: null, related_section_id: null, is_published: true, is_featured: false },
 ];
 
 export const DEMO_PROGRESS: Progress[] = [
   { id: 'prog_1', user_id: 'user_student', lesson_id: 'les_1', status: 'completed', completed_at: '2025-02-12' },
-  { id: 'prog_2', user_id: 'user_student', lesson_id: 'les_2', status: 'completed', completed_at: '2025-02-15' },
-  { id: 'prog_3', user_id: 'user_student', lesson_id: 'les_3', status: 'completed', completed_at: '2025-02-18' },
-  { id: 'prog_4', user_id: 'user_student', lesson_id: 'les_4', status: 'completed', completed_at: '2025-02-22' },
-  { id: 'prog_5', user_id: 'user_student', lesson_id: 'les_5', status: 'completed', completed_at: '2025-02-26' },
-  { id: 'prog_6', user_id: 'user_student', lesson_id: 'les_6', status: 'completed', completed_at: '2025-03-01' },
-  { id: 'prog_7', user_id: 'user_student', lesson_id: 'les_7', status: 'completed', completed_at: '2025-03-04' },
-  { id: 'prog_8', user_id: 'user_student', lesson_id: 'les_8', status: 'completed', completed_at: '2025-03-07' },
-  { id: 'prog_9', user_id: 'user_student', lesson_id: 'les_9', status: 'completed', completed_at: '2025-03-09' },
-  { id: 'prog_10', user_id: 'user_student', lesson_id: 'les_10', status: 'in_progress', completed_at: null },
-  { id: 'prog_11', user_id: 'user_student', lesson_id: 'les_11', status: 'not_started', completed_at: null },
+  { id: 'prog_2', user_id: 'user_student', lesson_id: 'les_2', status: 'completed', completed_at: '2025-02-14' },
+  { id: 'prog_3', user_id: 'user_student', lesson_id: 'les_3', status: 'completed', completed_at: '2025-02-17' },
+  { id: 'prog_4', user_id: 'user_student', lesson_id: 'les_4', status: 'completed', completed_at: '2025-02-20' },
+  { id: 'prog_5', user_id: 'user_student', lesson_id: 'les_5', status: 'completed', completed_at: '2025-02-24' },
+  { id: 'prog_6', user_id: 'user_student', lesson_id: 'les_6', status: 'completed', completed_at: '2025-02-27' },
+  { id: 'prog_7', user_id: 'user_student', lesson_id: 'les_7', status: 'completed', completed_at: '2025-03-01' },
+  { id: 'prog_8', user_id: 'user_student', lesson_id: 'les_8', status: 'completed', completed_at: '2025-03-04' },
+  { id: 'prog_9', user_id: 'user_student', lesson_id: 'les_9', status: 'completed', completed_at: '2025-03-07' },
+  { id: 'prog_10', user_id: 'user_student', lesson_id: 'les_10', status: 'completed', completed_at: '2025-03-09' },
+  { id: 'prog_11', user_id: 'user_student', lesson_id: 'les_11', status: 'in_progress', completed_at: null },
   { id: 'prog_12', user_id: 'user_student', lesson_id: 'les_12', status: 'not_started', completed_at: null },
+  { id: 'prog_13', user_id: 'user_student', lesson_id: 'les_13', status: 'not_started', completed_at: null },
 ];
 
 export const DEMO_TRAINER_STATS: TrainerStats = {
@@ -532,10 +574,10 @@ export const DEMO_TRAINER_STATS: TrainerStats = {
 };
 
 export const DEMO_ATTEMPTS: Attempt[] = [
-  { id: 'att_1', user_id: 'user_student', exercise_id: 'ex_1', mode: 'lesson', selected_answer: 'goes', is_correct: true, score_delta: 10, created_at: '2025-02-12' },
-  { id: 'att_2', user_id: 'user_student', exercise_id: 'ex_2', mode: 'lesson', selected_answer: 'are', is_correct: true, score_delta: 10, created_at: '2025-02-12' },
-  { id: 'att_3', user_id: 'user_student', exercise_id: 'ex_4', mode: 'lesson', selected_answer: 'plays', is_correct: false, score_delta: -5, created_at: '2025-02-15' },
-  { id: 'att_4', user_id: 'user_student', exercise_id: 'ex_6', mode: 'trainer_compare', selected_answer: 'is drinking / drinks', is_correct: false, score_delta: -5, created_at: '2025-02-20' },
+  { id: 'att_1', user_id: 'user_student', exercise_id: 'ex_2a', mode: 'lesson', selected_answer: 'goes', is_correct: true, score_delta: 10, created_at: '2025-02-14' },
+  { id: 'att_2', user_id: 'user_student', exercise_id: 'ex_1b', mode: 'lesson', selected_answer: 'are', is_correct: true, score_delta: 10, created_at: '2025-02-12' },
+  { id: 'att_3', user_id: 'user_student', exercise_id: 'ex_3a', mode: 'lesson', selected_answer: 'plays', is_correct: false, score_delta: -5, created_at: '2025-02-17' },
+  { id: 'att_4', user_id: 'user_student', exercise_id: 'ex_4a', mode: 'trainer_compare', selected_answer: 'is drinking / drinks', is_correct: false, score_delta: -5, created_at: '2025-02-20' },
 ];
 
 // Helper functions
