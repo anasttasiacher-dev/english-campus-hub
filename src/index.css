@@ -6,60 +6,60 @@
 
 @layer base {
   :root {
-    /* Academic Campus Palette */
-    --background: 40 33% 97%;
-    --foreground: 0 0% 17%;
+    /* Academic Campus Palette — richer, more readable */
+    --background: 42 30% 96%;
+    --foreground: 210 10% 15%;
 
-    --card: 40 30% 96%;
-    --card-foreground: 0 0% 17%;
+    --card: 40 28% 97%;
+    --card-foreground: 210 10% 15%;
 
-    --popover: 40 33% 97%;
-    --popover-foreground: 0 0% 17%;
+    --popover: 40 28% 97%;
+    --popover-foreground: 210 10% 15%;
 
-    --primary: 160 25% 27%;
-    --primary-foreground: 40 33% 97%;
+    --primary: 152 32% 22%;
+    --primary-foreground: 42 30% 96%;
 
-    --secondary: 35 22% 90%;
-    --secondary-foreground: 0 0% 17%;
+    --secondary: 38 20% 88%;
+    --secondary-foreground: 210 10% 15%;
 
-    --muted: 40 18% 92%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 40 16% 90%;
+    --muted-foreground: 20 8% 38%;
 
-    --accent: 37 42% 58%;
-    --accent-foreground: 0 0% 17%;
+    --accent: 37 42% 52%;
+    --accent-foreground: 210 10% 15%;
 
     --destructive: 0 65% 51%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 35 20% 87%;
-    --input: 35 20% 87%;
-    --ring: 160 25% 27%;
+    --border: 35 18% 82%;
+    --input: 35 18% 82%;
+    --ring: 152 32% 22%;
 
     --radius: 0.625rem;
 
     /* Custom tokens */
-    --campus-green: 160 25% 27%;
-    --campus-green-light: 155 20% 45%;
-    --campus-sage: 152 15% 58%;
-    --campus-gold: 37 42% 58%;
+    --campus-green: 152 32% 22%;
+    --campus-green-light: 148 24% 40%;
+    --campus-sage: 145 18% 48%;
+    --campus-gold: 37 50% 50%;
     --campus-gold-light: 38 50% 85%;
-    --campus-brown: 30 22% 43%;
-    --campus-cream: 40 33% 97%;
-    --campus-cream-dark: 38 25% 93%;
-    --campus-paper: 40 30% 96%;
-    --campus-charcoal: 0 0% 17%;
-    --campus-warm-gray: 30 8% 62%;
-    --campus-success: 145 45% 40%;
-    --campus-info: 200 50% 50%;
+    --campus-brown: 25 28% 35%;
+    --campus-cream: 42 30% 96%;
+    --campus-cream-dark: 38 22% 91%;
+    --campus-paper: 40 28% 97%;
+    --campus-charcoal: 210 10% 15%;
+    --campus-warm-gray: 20 8% 50%;
+    --campus-success: 145 50% 35%;
+    --campus-info: 200 50% 45%;
 
-    --sidebar-background: 160 25% 22%;
-    --sidebar-foreground: 40 33% 92%;
-    --sidebar-primary: 37 42% 58%;
-    --sidebar-primary-foreground: 0 0% 17%;
-    --sidebar-accent: 160 20% 30%;
-    --sidebar-accent-foreground: 40 33% 92%;
-    --sidebar-border: 160 18% 28%;
-    --sidebar-ring: 37 42% 58%;
+    --sidebar-background: 152 32% 18%;
+    --sidebar-foreground: 42 30% 92%;
+    --sidebar-primary: 37 50% 50%;
+    --sidebar-primary-foreground: 210 10% 15%;
+    --sidebar-accent: 152 24% 26%;
+    --sidebar-accent-foreground: 42 30% 92%;
+    --sidebar-border: 152 20% 24%;
+    --sidebar-ring: 37 50% 50%;
 
     --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
     --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -72,6 +72,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -93,7 +95,7 @@
     @apply bg-card rounded-xl border border-border shadow-sm transition-all duration-300 hover:shadow-md hover:border-campus-sage/40;
   }
   .section-padding {
-    @apply py-16 md:py-24 px-4 md:px-8;
+    @apply py-14 md:py-20 px-4 md:px-6;
   }
   .campus-gradient {
     background: linear-gradient(135deg, hsl(var(--campus-cream)) 0%, hsl(var(--campus-cream-dark)) 100%);
