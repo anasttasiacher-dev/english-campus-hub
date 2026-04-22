@@ -157,32 +157,94 @@ export const DEMO_SECTIONS: Section[] = [
 
 export const DEMO_LESSONS: Lesson[] = [
   {
-    id: 'les_1', section_id: 'sec_1', title: 'To be (am / is / are)', short_description: 'Глагол to be: состояния, характеристики, базовые конструкции',
+    id: 'les_1', section_id: 'sec_1', title: 'To be (am / is / are)', short_description: 'Глагол «быть»: am / is / are — базовый кирпичик английского',
     lesson_number: 1, status: 'published', video_url: '', sort_order: 1, is_published: true,
-    note_content: `## To be (am / is / are)
+    note_content: `## Глагол to be
 
-### Когда используется
-- **Характеристики и состояния:** She is tall. He is happy.
-- **Профессия, возраст, национальность:** I am a student. They are from Germany.
-- **Местоположение:** We are at home.
+### 1. Что такое to be
+**To be** — это глагол «быть». В английском предложении почти всегда нужен глагол, даже там, где в русском его нет.
 
-### Структура
-| Subject | To be | Example |
-|---------|-------|---------|
-| I | am | I **am** a student. |
-| He/She/It | is | She **is** happy. |
-| You/We/They | are | They **are** here. |
+- Я дома. → I **am** at home.
+- Он врач. → He **is** a doctor.
+- Они устали. → They **are** tired.
 
-### Отрицание и вопросы
-| Форма | Пример |
-|-------|--------|
-| **−** | I **am not** / He **isn't** / They **aren't** |
-| **?** | **Am** I? / **Is** she? / **Are** they? |
+### 2. Когда используется
+- **Кто / что:** I **am** a teacher.
+- **Какой:** She **is** tall.
+- **Где:** They **are** at work.
+- **Откуда:** I **am** from Russia.
+- **Состояние / погода:** It **is** cold.
 
-### Типичные ошибки
-- ❌ I is a student → ✅ I **am** a student
-- ❌ He are happy → ✅ He **is** happy
-- ❌ I am work → ✅ I **work** (не смешивай to be и основной глагол)`
+### 3. Формы глагола to be
+| Подлежащее | Форма | Пример |
+|------------|-------|--------|
+| I | am | I **am** ready. |
+| he / she / it | is | She **is** at school. |
+| we / you / they | are | They **are** friends. |
+
+### 4. Утвердительное предложение
+**Подлежащее + am / is / are + остальная информация**
+
+- I **am** ready.
+- He **is** my uncle.
+- We **are** friends.
+
+### 5. Краткие формы
+| Полная | Краткая |
+|--------|---------|
+| I am | I'm |
+| he is / she is / it is | he's / she's / it's |
+| we are / you are / they are | we're / you're / they're |
+
+### 6. Отрицание
+**Подлежащее + am / is / are + not**
+
+| Полная | Краткая |
+|--------|---------|
+| I am not | I'm not |
+| he is not | he isn't |
+| they are not | they aren't |
+
+- I'**m not** cold.
+- He **isn't** late.
+- They **aren't** in the car.
+
+### 7. Общий вопрос
+В вопросе меняется порядок слов: **am / is / are + подлежащее + … ?**
+
+- She **is** at home. → **Is** she at home?
+- They **are** rich. → **Are** they rich?
+
+### 8. Специальные вопросы
+**Вопросительное слово + am / is / are + подлежащее + ?**
+
+- **Where are** you from?
+- **How are** you?
+- **What is** your name?
+- **Why is** he late?
+
+### 9. Краткие ответы
+- Are you busy? — **Yes, I am.** / **No, I'm not.**
+- Is the soup hot? — **Yes, it is.** / **No, it isn't.**
+- Are we early? — **Yes, we are.** / **No, we aren't.**
+
+### 10. Три главные формулы
+| Тип | Формула | Пример |
+|-----|---------|--------|
+| Утверждение | Subj + am/is/are | She **is** happy. |
+| Отрицание | Subj + am/is/are + not | She **isn't** happy. |
+| Вопрос | Am/Is/Are + Subj + ? | **Is** she happy? |
+
+### 11. Частые ошибки
+- ❌ I in the garden → ✅ I **am** in the garden
+- ❌ The shops **is** open → ✅ The shops **are** open
+- ❌ It **is** sunny today? → ✅ **Is** it sunny today?
+
+### 12. Итог
+- В английском предложении нужен глагол.
+- У to be три формы: **am / is / are**.
+- Отрицание — через **not** после глагола.
+- Вопрос — через изменение порядка слов.`
   },
   {
     id: 'les_2', section_id: 'sec_1', title: 'Present Simple', short_description: 'Рутина, факты, регулярные действия',
