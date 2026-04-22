@@ -157,32 +157,94 @@ export const DEMO_SECTIONS: Section[] = [
 
 export const DEMO_LESSONS: Lesson[] = [
   {
-    id: 'les_1', section_id: 'sec_1', title: 'To be (am / is / are)', short_description: 'Глагол to be: состояния, характеристики, базовые конструкции',
+    id: 'les_1', section_id: 'sec_1', title: 'To be (am / is / are)', short_description: 'Глагол «быть»: am / is / are — базовый кирпичик английского',
     lesson_number: 1, status: 'published', video_url: '', sort_order: 1, is_published: true,
-    note_content: `## To be (am / is / are)
+    note_content: `## Глагол to be
 
-### Когда используется
-- **Характеристики и состояния:** She is tall. He is happy.
-- **Профессия, возраст, национальность:** I am a student. They are from Germany.
-- **Местоположение:** We are at home.
+### 1. Что такое to be
+**To be** — это глагол «быть». В английском предложении почти всегда нужен глагол, даже там, где в русском его нет.
 
-### Структура
-| Subject | To be | Example |
-|---------|-------|---------|
-| I | am | I **am** a student. |
-| He/She/It | is | She **is** happy. |
-| You/We/They | are | They **are** here. |
+- Я дома. → I **am** at home.
+- Он врач. → He **is** a doctor.
+- Они устали. → They **are** tired.
 
-### Отрицание и вопросы
-| Форма | Пример |
-|-------|--------|
-| **−** | I **am not** / He **isn't** / They **aren't** |
-| **?** | **Am** I? / **Is** she? / **Are** they? |
+### 2. Когда используется
+- **Кто / что:** I **am** a teacher.
+- **Какой:** She **is** tall.
+- **Где:** They **are** at work.
+- **Откуда:** I **am** from Russia.
+- **Состояние / погода:** It **is** cold.
 
-### Типичные ошибки
-- ❌ I is a student → ✅ I **am** a student
-- ❌ He are happy → ✅ He **is** happy
-- ❌ I am work → ✅ I **work** (не смешивай to be и основной глагол)`
+### 3. Формы глагола to be
+| Подлежащее | Форма | Пример |
+|------------|-------|--------|
+| I | am | I **am** ready. |
+| he / she / it | is | She **is** at school. |
+| we / you / they | are | They **are** friends. |
+
+### 4. Утвердительное предложение
+**Подлежащее + am / is / are + остальная информация**
+
+- I **am** ready.
+- He **is** my uncle.
+- We **are** friends.
+
+### 5. Краткие формы
+| Полная | Краткая |
+|--------|---------|
+| I am | I'm |
+| he is / she is / it is | he's / she's / it's |
+| we are / you are / they are | we're / you're / they're |
+
+### 6. Отрицание
+**Подлежащее + am / is / are + not**
+
+| Полная | Краткая |
+|--------|---------|
+| I am not | I'm not |
+| he is not | he isn't |
+| they are not | they aren't |
+
+- I'**m not** cold.
+- He **isn't** late.
+- They **aren't** in the car.
+
+### 7. Общий вопрос
+В вопросе меняется порядок слов: **am / is / are + подлежащее + … ?**
+
+- She **is** at home. → **Is** she at home?
+- They **are** rich. → **Are** they rich?
+
+### 8. Специальные вопросы
+**Вопросительное слово + am / is / are + подлежащее + ?**
+
+- **Where are** you from?
+- **How are** you?
+- **What is** your name?
+- **Why is** he late?
+
+### 9. Краткие ответы
+- Are you busy? — **Yes, I am.** / **No, I'm not.**
+- Is the soup hot? — **Yes, it is.** / **No, it isn't.**
+- Are we early? — **Yes, we are.** / **No, we aren't.**
+
+### 10. Три главные формулы
+| Тип | Формула | Пример |
+|-----|---------|--------|
+| Утверждение | Subj + am/is/are | She **is** happy. |
+| Отрицание | Subj + am/is/are + not | She **isn't** happy. |
+| Вопрос | Am/Is/Are + Subj + ? | **Is** she happy? |
+
+### 11. Частые ошибки
+- ❌ I in the garden → ✅ I **am** in the garden
+- ❌ The shops **is** open → ✅ The shops **are** open
+- ❌ It **is** sunny today? → ✅ **Is** it sunny today?
+
+### 12. Итог
+- В английском предложении нужен глагол.
+- У to be три формы: **am / is / are**.
+- Отрицание — через **not** после глагола.
+- Вопрос — через изменение порядка слов.`
   },
   {
     id: 'les_2', section_id: 'sec_1', title: 'Present Simple', short_description: 'Рутина, факты, регулярные действия',
@@ -432,20 +494,108 @@ export const ALL_TENSE_TAGS = [
 ];
 
 export const DEMO_EXERCISES: Exercise[] = [
-  // Lesson 1 (to be)
+  // Lesson 1 (to be) — выбор формы am / is / are
   {
-    id: 'ex_1b', lesson_id: 'les_1', prompt: 'They ___ from Germany.',
+    id: 'ex_1a', lesson_id: 'les_1', prompt: 'I ___ at home.',
     exercise_type: 'multiple_choice', tense_tags: ['to_be'], difficulty: 'easy',
-    options_json: ['is', 'am', 'are', 'be'],
-    correct_answer: 'are', explanation: 'С they используем are.',
-    hint: 'They — множественное число.', confusion_note: 'Не путай am/is/are.', is_active: true
+    options_json: ['am', 'is', 'are'],
+    correct_answer: 'am', explanation: 'С I всегда используем am.',
+    hint: 'Только одна форма работает с I.', confusion_note: 'I → am, никогда is/are.', is_active: true
   },
   {
-    id: 'ex_1c', lesson_id: 'les_1', prompt: 'She ___ a doctor.',
+    id: 'ex_1b', lesson_id: 'les_1', prompt: 'She ___ my sister.',
+    exercise_type: 'multiple_choice', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['am', 'is', 'are'],
+    correct_answer: 'is', explanation: 'С he / she / it используем is.',
+    hint: 'She — 3-е лицо ед. числа.', confusion_note: 'am → только I, are → we/you/they.', is_active: true
+  },
+  {
+    id: 'ex_1c', lesson_id: 'les_1', prompt: 'We ___ ready.',
+    exercise_type: 'multiple_choice', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['am', 'is', 'are'],
+    correct_answer: 'are', explanation: 'С we / you / they используем are.',
+    hint: 'We — множественное число.', confusion_note: 'is — только для одного лица/предмета.', is_active: true
+  },
+  {
+    id: 'ex_1d', lesson_id: 'les_1', prompt: 'It ___ cold today.',
+    exercise_type: 'multiple_choice', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['am', 'is', 'are'],
+    correct_answer: 'is', explanation: 'It → is. Используем для погоды и состояний.',
+    hint: 'It — 3-е лицо ед. числа.', confusion_note: 'It всегда идёт с is.', is_active: true
+  },
+  {
+    id: 'ex_1e', lesson_id: 'les_1', prompt: 'My parents ___ at work.',
+    exercise_type: 'multiple_choice', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['am', 'is', 'are'],
+    correct_answer: 'are', explanation: 'My parents — мн. число → are.',
+    hint: 'Если подлежащих несколько → are.', confusion_note: 'Главное — число подлежащего, а не его длина.', is_active: true
+  },
+  {
+    id: 'ex_1f', lesson_id: 'les_1', prompt: 'The keys ___ on the table.',
+    exercise_type: 'multiple_choice', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['am', 'is', 'are'],
+    correct_answer: 'are', explanation: 'Keys — мн. число, поэтому are.',
+    hint: 'Сколько ключей? Больше одного.', confusion_note: 'My bag → is, the keys → are.', is_active: true
+  },
+  // Отрицание
+  {
+    id: 'ex_1g', lesson_id: 'les_1', prompt: 'Сделай отрицательным: "She is at home."',
+    exercise_type: 'error_correction', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ["She isn't at home.", "She not is at home.", "She don't at home.", "She no is at home."],
+    correct_answer: "She isn't at home.",
+    explanation: 'Отрицание: am / is / are + not. is + not = isn\'t.',
+    hint: 'not ставится после am / is / are.', confusion_note: 'don\'t — это для других глаголов, не для to be.', is_active: true
+  },
+  {
+    id: 'ex_1h', lesson_id: 'les_1', prompt: 'Сделай отрицательным: "I am tired."',
+    exercise_type: 'error_correction', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ["I'm not tired.", "I amn't tired.", "I don't tired.", "I not am tired."],
+    correct_answer: "I'm not tired.",
+    explanation: 'С I краткая форма отрицания — I\'m not. Формы amn\'t не существует.',
+    hint: 'I + am + not.', confusion_note: 'Запомни: только I\'m not, никогда I amn\'t.', is_active: true
+  },
+  // Вопросы
+  {
+    id: 'ex_1i', lesson_id: 'les_1', prompt: 'Составь вопрос: she / at school',
+    exercise_type: 'reorder', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['Is she at school?', 'She is at school?', 'Are she at school?', 'Does she at school?'],
+    correct_answer: 'Is she at school?',
+    explanation: 'В вопросе с to be форма глагола идёт перед подлежащим: Is she at school?',
+    hint: 'Меняй порядок слов: глагол → подлежащее.', confusion_note: 'Не оставляй прямой порядок как в утверждении.', is_active: true
+  },
+  {
+    id: 'ex_1j', lesson_id: 'les_1', prompt: 'Составь специальный вопрос: Where / you / from?',
+    exercise_type: 'reorder', tense_tags: ['to_be'], difficulty: 'medium',
+    options_json: ['Where are you from?', 'Where you are from?', 'Where is you from?', 'Where do you from?'],
+    correct_answer: 'Where are you from?',
+    explanation: 'Формула: вопросительное слово + am/is/are + подлежащее. С you → are.',
+    hint: 'Where + are + you + from?', confusion_note: 'Вопросительное слово не отменяет инверсию.', is_active: true
+  },
+  // Исправление ошибок
+  {
+    id: 'ex_1k', lesson_id: 'les_1', prompt: 'Исправь ошибку: "They is at home."',
+    exercise_type: 'error_correction', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['They are at home.', 'They am at home.', 'They be at home.', 'They is in home.'],
+    correct_answer: 'They are at home.',
+    explanation: 'They — мн. число, нужна форма are.',
+    hint: 'Какая форма to be идёт с they?', confusion_note: 'is → he/she/it, are → we/you/they.', is_active: true
+  },
+  {
+    id: 'ex_1l', lesson_id: 'les_1', prompt: 'Исправь ошибку: "Are she from Italy?"',
+    exercise_type: 'error_correction', tense_tags: ['to_be'], difficulty: 'easy',
+    options_json: ['Is she from Italy?', 'She is from Italy?', 'Does she from Italy?', 'Am she from Italy?'],
+    correct_answer: 'Is she from Italy?',
+    explanation: 'С she используется is, а не are.',
+    hint: 'She → is, даже в вопросе.', confusion_note: 'Форма to be зависит от подлежащего, не от типа предложения.', is_active: true
+  },
+  // Краткие ответы
+  {
+    id: 'ex_1m', lesson_id: 'les_1', prompt: '— Are you tired?\n— No, I ___.',
     exercise_type: 'fill_gap', tense_tags: ['to_be'], difficulty: 'easy',
-    options_json: ['am', 'is', 'are', 'be'],
-    correct_answer: 'is', explanation: 'С she/he/it используем is.',
-    hint: 'She — 3-е лицо единственного числа.', confusion_note: 'am → только для I.', is_active: true
+    options_json: ["am not", "isn't", "aren't", "don't"],
+    correct_answer: "am not",
+    explanation: 'В кратком ответе с I в отрицании используем am not (или I\'m not).',
+    hint: 'I → am, отрицание → am not.', confusion_note: 'Нет формы I isn\'t — только I am not / I\'m not.', is_active: true
   },
   // Lesson 2 (Present Simple)
   {
